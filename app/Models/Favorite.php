@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Person extends Model
+class Favorite extends Model
 {
     use HasFactory;
-
-
-    public function favorites()
-    {
-        return $this->hasMany(Favorite::class);
-    }
 }
