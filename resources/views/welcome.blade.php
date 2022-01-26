@@ -23,6 +23,16 @@
         <link rel="stylesheet" href={{ mix('css/app.css') }}>
     </head>
     <body class="antialiased">
+        <h2>HomePage</h2>
+        <h4>Links</h4>
+        <div class="homelinks">
+            <a href="http://">Add person</a><br>
+            <a href="http://">Add favorites</a><br>
+            <a href="http://">Dashboard</a><br>
+            <a href="http://">Assign Badges</a><br>
+        </div>
         
+
+
     </body>
 </html>

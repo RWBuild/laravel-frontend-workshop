@@ -2,3 +2,6 @@
     padding: auto;
     margin: auto;
 }
+a:hover{
+    color: green;
+}
