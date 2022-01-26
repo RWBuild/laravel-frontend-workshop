@@ -14,7 +14,7 @@
 
 ## Routes List
 
-- Get all people : `{url}/people/21`
+- Get all people : `{url}/people`
 - Add a person people : POST - `{url}/people`
 - Show a person: `{url}/people/:id
 - Add a favorite thing to a person -> POST -> `{url}/favorite/assign-to-person`
