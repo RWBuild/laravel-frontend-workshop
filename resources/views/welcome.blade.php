@@ -21,8 +21,8 @@
                 <h1>CRM</h1>
             </div>
            <div>
-            <a href="#">Add Person</a>
-            <a href="#">Add Favorites</a>
+            <a href="/people/create">Add Person</a>
+            <a href="/favorites/create">Add Favorites</a>
             <a href="#">Dashboard</a>
             <a href="#">Assign Badges</a>
            </div>
