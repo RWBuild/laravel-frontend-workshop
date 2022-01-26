@@ -15,9 +15,24 @@ A simple CRM training project for laravel
 
 ## Routes List
 
-- Get all people : `{url}/people`
-- Add a person people : POST - `{url}/people`
+- Get all people : GET -> `{url}/people`
+- Add a new person : POST - `{url}/people`
 - Show a person: `{url}/people/:id
-- Add a favorite thing to a person -> POST -> `{url}/favorite/assign-to-person`
+- Assign a favorite thing to a given person -> POST -> `{url}/favorite/assign-to-person`
 
 
+## Models
+
+1) Person (first_name, last_name, email, dob)
+
+- first_name
+- last_name
+- email
+- dob
+- favorites (array of person [Favorite])
+
+2) Favorite
+
+- id
+- name
+- type
