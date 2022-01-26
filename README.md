@@ -23,6 +23,8 @@ A simple CRM training project for laravel
     dob
  }
 - Show a person: `{url}/people/:id
+- Show the form to create a person `{{url}}/people/create`
+- Show the form to assign favorite to a person `{{url}}/favorites/create`
 - Assign a favorite thing to a given person -> POST -> `{url}/favorite/assign-to-person`,
 Payload {
     person_id
