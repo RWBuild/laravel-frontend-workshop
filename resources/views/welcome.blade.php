@@ -23,10 +23,10 @@
     <body class="antialiased">
        <div class="oft">
            <h1>homepage</h1>
-           <a href="person"> Add person</a>
-           <a href="Favourite"> Add Favourites</a>
-           <a href="Dashboard"> Dashboard</a>
-           <a href="Assign Badges"> Assign Badges</a>
+           <a href="/people/create"> Add person</a></br>
+           <a href="/favorites/create"> Add Favourites</a></br>
+           <a href="Dashboard"> Dashboard</a></br>
+           <a href="Assign Badges"> Assign Badges</a><br>
        </div>
     </body>
 </html>
