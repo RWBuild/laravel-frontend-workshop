@@ -12,17 +12,15 @@
     <form method="POST" action="/favorite/assign-to-person">
         @csrf
         <select name="person_id" id="person_id">
-            @foreach ($people as $person)
-         <option>
+        @foreach ($people as $person)
+        <option value="{{$person->id}}">
              
-             {{$person->first_name}} - {{$person->last_name}}
-                 
-            
-         </option>
-         @endforeach
+             {{$person->first_name}} - {{$person->last_name}} 
+        </option>
+        @endforeach
         </select>
-        <input type="text" placeholder="add favorite" name=""/>
-        <input type="text" placeholder="Description" />
+        <input type="text" placeholder="add favorite" name="name"/>
+        <input type="text" placeholder="Description" name="description" />
 
 
       
