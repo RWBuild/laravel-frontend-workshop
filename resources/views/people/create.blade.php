@@ -22,7 +22,7 @@
         <div class="login_form">
             <form action="/people" method="POST">
                 @csrf
-                <h1>Add</h1>
+                <h1>Add people</h1>
                 <input type="text" name="first_name" placeholder="First name" required>
                 <input type="text" name="last_name" placeholder="Last name" required>
                 <input type="email" name="email" placeholder="Email" required>

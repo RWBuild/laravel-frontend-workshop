@@ -30,7 +30,7 @@
             {{-- Link --}}
             <div class="homePage_links">
                 <a href="/people/create">1. Add person</a>
-                <a href="#">2. Add Favorites</a>
+                <a href="/favorites/create">2. Add Favorites</a>
                 <a href="#">3. Dashboard</a>
                 <a href="#">4. Assign badges</a>
             </div>
