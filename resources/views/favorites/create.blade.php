@@ -16,13 +16,14 @@
             <label for="person">Person:</label>
             <select name="person_id" id="person_id">
                 @foreach ($people as $person)
-                    <option>{{ $person->first_name }} {{ $person->last_name }}</option>
+                    <option value= "{{$person->id}}">{{ $person->first_name }} {{ $person->last_name }}</option>
                 @endforeach
             </select><br>
             <label for="favname">Favorite thing:</label><br>
             <input type="text" name="name" placeholder="favorite thing."><br>
             <label for="description">Description:</label><br>
             <input type="text" name="description" placeholder="description"><br>
+
 
             <button type="submit">Add favorite</button>
         </form>
