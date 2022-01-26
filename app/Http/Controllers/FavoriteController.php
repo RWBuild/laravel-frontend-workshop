@@ -23,4 +23,12 @@ class FavoriteController extends Controller
         return redirect()->route('people.show', [$request->person_id]);
     }
 
+
+    public function create()
+    {
+        $people = Person::all();
+
+        return view('favorites.create', compact('people'));
+    }
+
 }
