@@ -1,3 +1,142 @@
-body{
-    background-color:"green";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    font-family: Roboto Slab;
+    font-size:34px;
+    padding: 25px;
+
+}
+.background{
+    background-color:rgb(2, 19, 2);
+    }
+
+/* style for content  */
+.content-childreen{
+    min-height:60vh;
+    /* background-color: #333; */
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+ 
+}
+/* end of style for content  */
+.nav-bar{
+    width:100%;
+    padding:1rem;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+    padding: 30px;
+  
+}
+.nav-bar a{
+    
+    color:white;
+    padding-left:20px;
+    text-decoration: none;
+    font-size:20px;
+    font-family: Roboto Slab;
+    text-align:center;
+
+
+}
+/* end of nav style */
+/* welcome page style */
+.welcome-container a{
+    padding:10px;
+
+}
+.welcome-container a:hover{
+    padding:10px;
+    color:rgb(2, 19, 2);
+
+}
+.container-route{
+
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+    font-size: 20px;
+   
+}
+
+/* end of welcome style */
+
+
+/* create people style  */
+
+.create-person-container{
+    height: 70vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    
+  
+}
+/* end of people style  */
+.form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:500px;
+    padding:20px;
+    box-shadow: 5px 0px 10px 8px #8888;
+
+
+    /* width:100%; */
+}
+.form input,textarea,select {
+    width: 80%;
+    padding: 12px;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  .form button{
+      padding:15px;
+      border-radius:5px;
+      border:2px solid rgb(2, 19, 2);
+      width: 150px;
+  }
+  .form button:hover{
+   
+    background-color:rgb(2, 19, 2);
+    width: 150px;
+    color:white;
+}
+/* add person style */
+
+/* footer style */
+.footer{
+    bottom:0;
+    position:fixed;
+    width:100%;
+    color:white;
+    padding:12px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding:2rem;
+
+  
+
+}
+.footer-bottom{
+    bottom:0;
+    position:fixed;
+    width:100%;
+    text-align: center;
+    color: white;
+    
 }

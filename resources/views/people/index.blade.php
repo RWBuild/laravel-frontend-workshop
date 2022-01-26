@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>'Sup people</h1>
+        <h1> People Added succesfully !</h1>
     </body>
 </html>

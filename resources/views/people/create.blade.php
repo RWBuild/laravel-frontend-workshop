@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>add</title>
-</head>
-<body>
-    <p>add people</p>
-    <form method="POST" action="/people">
-        @csrf
-        <input type="text" placeholder="First Name" name="first_name"/>
-        <input type="text" placeholder="Last Name" name="last_name"/>
-        <input type="email" placeholder="Email" name="email"/>
-        <input type="date" placeholder="DoB" name="dob"/>
-        <button type="submit">Submit</button>
-    </form>
-    
-</body>
-</html>
+@extends('layout.layout')
+@section('content')
+
+    <div class="create-person-container">
+        <h2> Add a Person </h2>
+        <form method="POST" action="/people">
+            @csrf
+            <div class="form">
+                <input type="text" placeholder="First Name" name="first_name" />
+                @error('first_name')
+                    {{-- to get the error message --}}
+                    {{ $message }}
+                @enderror
+                <input type="text" placeholder="Last Name" name="last_name" />
+                @error('last_name')
+                    {{ $message }}
+                @enderror
+
+                <input type="email" placeholder="Email" name="email" />
+                @error('first_name')
+                    {{ $message }}
+                @enderror
+
+                <input type="date" placeholder="DoB" name="dob" />
+                @error('first_name')
+                    {{ $message }}
+                @enderror
+                <div class="button">
+
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+@endsection
