@@ -26,8 +26,8 @@
         <h2>HomePage</h2>
         <h4>Links</h4>
         <div class="homelinks">
-            <a href="http://">Add person</a><br>
-            <a href="http://">Add favorites</a><br>
+            <a href="/people/create">Add person</a><br>
+            <a href="/favorites/create">Add favorites</a><br>
             <a href="http://">Dashboard</a><br>
             <a href="http://">Assign Badges</a><br>
         </div>
