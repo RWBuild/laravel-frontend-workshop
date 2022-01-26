@@ -1,9 +1,10 @@
 ## Frontend Workshop Demo
 
+A simple CRM training project for laravel
 
 ## Local Setup
 
-- Setup the database (the default configuration is sqlite)
+- Setup the database (the default configuration is mysql)
 - Run the following commands project ```
     - Setup your Local Environment
     - composer install
