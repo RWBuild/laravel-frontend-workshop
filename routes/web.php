@@ -20,4 +20,5 @@ Route::get('/', function () {
 
 Route::resource('/people', 'PersonController');
 Route::post('/favorite/assign-to-person', 'FavoriteController@store');
+Route::get('/favorites/create', 'FavoriteController@create')->name('favorites.create');
 
