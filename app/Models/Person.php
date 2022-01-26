@@ -9,6 +9,7 @@ class Person extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
 
     public function favorites()
     {
