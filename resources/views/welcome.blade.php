@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
 </head>
 <body>
  <h1>Home Page</h1>
- <a href="#">Add Person</a>
+ <a href="/people/create">Add Person</a>
  <br>
- <a href="#">Add Favorites</a>
+ <a href="/favorites/create">Add Favorites</a>
  <br>
 
  <a href="#">Dashboard </a>
@@ -21,11 +21,6 @@
  <a href="#">Assign Badges</a>
  <br>
 
- {{-- <form>
-     <input type="text" placeholder="First Name"/>
-     <input type="text" placeholder="Last Name"/>
-     <input type="email" placeholder="Email"/>
-     <input type="date" placeholder="DoB"/>
-</form> --}}
+
 </body>
 </html>
