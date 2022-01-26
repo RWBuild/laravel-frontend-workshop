@@ -31,9 +31,9 @@
     <div class="container">
         <!-- <div class="circle"></div> -->
         <header>welcome </header>
-        <button class="signup" > <a href="#" >Add Person</a></button>
+        <button class="signup" > <a href="/people/create" >Add Person</a></button>
         
-        <button class="signup"> <a href="#" >Add Favorite</a></button>
+        <button class="signup"> <a href="/favorites/create" >Add Favorite</a></button>
        
      
        
