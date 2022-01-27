@@ -11,4 +11,11 @@ class Badge extends Model
 
     protected $guarded = [];
 
+
+    public function peopleBadges()
+    {
+        return $this->belongsToMany(Person::class);
+    }
+
+
 }

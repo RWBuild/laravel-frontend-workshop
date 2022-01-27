@@ -15,4 +15,9 @@ class Person extends Model
     {
         return $this->hasMany(Favorite::class);
     }
+
+    public function assignedBadges()
+    {
+        return $this->belongsToMany(Badge::class);
+    }
 }
