@@ -60,7 +60,7 @@
                 
             </div>
 
-            <div class="button">
+            <div >
                 <button class="button" >Add</button>
             </div>
         </form>

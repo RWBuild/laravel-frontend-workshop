@@ -12,10 +12,10 @@
 
         @csrf
        
-        <select class="input-field"  name="person_id">
-            
+        <select class="input-field" placeholder="" name="person_id">
+            <option> select----</option>
         @foreach ($people as $user)
-        
+             
              <option value="{{ $user->id }}"> {{ $user->first_name }} {{ $user->last_name}}</option>
             
         
@@ -26,8 +26,8 @@
    
 
         <div class="input-field">
-            <label>Name </label>
-            <input type="text" id="email" name="name" >
+           
+            <input type="text" id="email"placeholder="email" name="name" >
             <div class="error">
                 @error('name')
                 {{ $message }}
@@ -37,8 +37,8 @@
         </div>
 
         <div class="input-field">
-            <label>Type </label>
-            <input type="text" id="email" name="type" >
+            
+            <input type="text" id="email" placeholder="type"name="type" >
             <div class="error">
                 @error('type')
                 {{ $message }}
@@ -48,8 +48,8 @@
         </div>
 
         <div class="input-field">
-            <label> description</label>
-            <textarea class="pswrd" type="text" id="pass"  name="description"  ></textarea>
+           
+            <textarea class="pswrd" type="text" placeholder="description"id="pass"  name="description"  ></textarea>
             <div class="error">
                 @error('description')
                 {{ $message }}
@@ -60,7 +60,7 @@
         </div>
        
      
-        <div class="button">
+        <div >
             <button class="button" >Add</button>
         </div>
        

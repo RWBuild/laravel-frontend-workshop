@@ -1,4 +1,15 @@
+
+
+
+
 @extends('layout.app')
 @section('content')
-<h1>'Sup people</h1>
+<div class="container">
+    <h1>Successfully Added</h1>
+
+</div>
+
+
+
+
 @endsection

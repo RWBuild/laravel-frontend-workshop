@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500&display=swap);
 :root {
     --main-bg-color: #dbbcd8;
-    --btn-color:#574355;
+    --btn-color:#dbbcd8;
     --fonts-style:('Source Serif 4', sans-serif);
     --error-color:red;
     
@@ -40,10 +40,11 @@
 h1{
     font-size: 50px;
     font-style: var(--fonts-style);
+    color: black;
 }
 header{
     padding:30px;
-     color: var(--main-bg-color);
+     color: black;
     
 }
 a:link { text-decoration: none; }
@@ -71,9 +72,28 @@ font-size: 15px;
      border-radius: 6px;
      width: 6rem;
      cursor: pointer;
+     font-weight: bold;
+     color: white;
+     font-size: 16px;
 }
-
-
+select{
+    background: #f0f1f8;
+   
+    border: none;
+    outline: none;
+    padding: 15px;
+}
+textarea{
+    height: 3rem;
+    
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #f0f1f8;
+    border-radius: 6px;
+    padding: 0 15px;
+   
+}
 
 .container{
     
@@ -93,15 +113,17 @@ font-family: var(--fonts-style);
 }
 
 .container-button{
-    padding: 6px;
+
+    /* padding: 6px; */
+    padding-left: 1rem !important;
+    padding: 10px;
     border: none;
-   background-color: var(--btn-color);
+   background-color: var(--main-bg-color);
      border-radius: 5px;
-     width: 6rem;
+     width: 8rem;
      margin: 1rem;
      font-size: var(--fonts-style);
-    
-     padding: 10px;
+    font-weight: bold;
      transition: transform 2s;
      
      
@@ -121,7 +143,7 @@ color: white;
 
     display: flex;
     flex-direction: column;
-   margin: 5px;
+   /* margin: 5px; */
     width: 50%;
     
 
@@ -134,9 +156,9 @@ color: white;
 .input-field input {
   
   border: 1px solid rgb(192, 192, 192);
-  height: 30px;
   
-  margin: 12px 0;
+  height: 2rem;
+  margin: 12px ;
   width: 90%;
   border: none;
   outline: none;
@@ -177,7 +199,7 @@ input:focus {
    
     box-shadow:  5px 5px 5px  5px #e2dcdc;
     font-family: var(--fonts-style);
-    height: 20rem;
+    height: auto;
   width: 30rem;
   font-size: 30px;
   display: flex;
