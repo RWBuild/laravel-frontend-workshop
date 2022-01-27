@@ -13,8 +13,12 @@ class BadgeFactory extends Factory
      */
     public function definition()
     {
+        $graphics = config('badges');
+
         return [
-            //
+            'name' => $this->faker->name('male'),
+            'description' => $this->faker->text(),
+            'graphic' => $graphics[array_rand($graphics)]
         ];
     }
 }
