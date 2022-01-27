@@ -8,10 +8,8 @@
     <a href="/people/create">Add Person</a>
      
  <a href="/favorites/create">Add Favorites</a>
- <a href="#">Dashboard </a>
- 
-
- <a href="#">Assign Badges</a>
+ <a href="/badges/assign">Assign Badges</a>
+ <a href="/dashboard">Dashboard </a>
  
 
  </div>
