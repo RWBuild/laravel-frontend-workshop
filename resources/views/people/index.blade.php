@@ -21,6 +21,15 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>'Sup people</h1>
+        <h1>people</h1>
+        @foreach ($people as $person)
+                <div>
+                    <h3>{{ $person->first_name }} {{ $person->last_name }} </h3>
+                    <p> {{ $person->email}}</p>
+                    <p>{{$person->dob}}</p>
+                </div>
+        @endforeach
+
+        
     </body>
 </html>
