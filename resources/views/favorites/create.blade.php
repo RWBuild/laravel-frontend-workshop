@@ -19,7 +19,7 @@
                 @error('name')
                     {{ message }}
                 @enderror
-                <textarea type="text" placeholder="Description" name="description"></textarea>
+                <textarea type="text" placeholder="Description" name="description" rows='4' cols="50"></textarea>
                 @error('name')
                     {{ message }}
                 @enderror

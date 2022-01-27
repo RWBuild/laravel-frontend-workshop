@@ -9,21 +9,29 @@
                 <input type="text" placeholder="First Name" name="first_name" />
                 @error('first_name')
                     {{-- to get the error message --}}
-                    {{ $message }}
+                    <div class="message-color">
+                        {{ $message }}
+                    </div>
                 @enderror
                 <input type="text" placeholder="Last Name" name="last_name" />
                 @error('last_name')
-                    {{ $message }}
+                    <div class="message-color">
+                        {{ $message }}
+                    </div>
                 @enderror
 
                 <input type="email" placeholder="Email" name="email" />
-                @error('first_name')
-                    {{ $message }}
+                @error('email')
+                    <div class="message-color">
+                        {{ $message }}
+                    </div>
                 @enderror
 
                 <input type="date" placeholder="DoB" name="dob" />
-                @error('first_name')
-                    {{ $message }}
+                @error('dob')
+                    <div class="message-color">
+                        {{ $message }}
+                    </div>
                 @enderror
                 <div class="button">
 

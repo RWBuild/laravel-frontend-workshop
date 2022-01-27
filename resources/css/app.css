@@ -17,7 +17,6 @@ h2{
 /* style for content  */
 .content-childreen{
     min-height:60vh;
-    /* background-color: #333; */
     display:flex;
     flex-direction: column;
     align-items:center;
@@ -41,7 +40,7 @@ h2{
     color:white;
     padding-left:20px;
     text-decoration: none;
-    font-size:20px;
+    font-size:16px;
     font-family: Roboto Slab;
     text-align:center;
 
@@ -103,8 +102,10 @@ h2{
     border: 1px solid #333;
     border-radius: 5px;
   }
+  
   .form button{
       padding:15px;
+      font-size: 16px;
       border-radius:5px;
       border:2px solid rgb(2, 19, 2);
       width: 150px;
@@ -114,6 +115,9 @@ h2{
     background-color:rgb(2, 19, 2);
     width: 150px;
     color:white;
+}
+.message-color{
+    color:red
 }
 /* add person style */
 
