@@ -1,17 +1,18 @@
 @extends('layout.layout')
 @section('content')
 
-    <div class="antialiased">
+    
         <h1>List of Badges</h1>
+        <div class="allbadge">
         @foreach ($badges as $badge)
-        <ul>
-            <li>
-        {{$$badge->graphic}}        
-        {{$badge->name}} 
-        {{$badge->description}}
+        <div class="badge-card">
+            <img src="{{ $badge->graphic }}" width="100" />
+            <h2>{{ $badge->name }}</h2>
+            <p>{{ $badge->description }}</p>
+        </div>
 
-            </li>
-        <ul> 
+
         @endforeach
+        
     </div>
 @endsection
