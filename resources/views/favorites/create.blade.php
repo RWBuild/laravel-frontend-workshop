@@ -12,6 +12,7 @@
     <div class="center-box">
       <div>
         <h3>Add Favorites</h3>
+        {{-- assign favorite to person form --}}
         <form action="/favorite/assign-to-person" method="POST">
           @csrf
           <div class="form-group">
@@ -58,6 +59,7 @@
           <button type="submit" class="btn">Create</button>
           <a href="/" class="btn">Back home</a>
         </form>
+        {{-- end assign to person form --}}
       </div>
     </div>
   </div>

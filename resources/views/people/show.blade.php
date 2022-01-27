@@ -1,14 +1,42 @@
 @extends('layout.app')
 @section('content')
-<div class="container">
-    <div class="center-box">
-      <div class="card">
-        Name: {{ $person->first_name }}  <br />
-        Last name : {{ $person->last_name }} <br/>
-        DOB: {{ $person->dob }} <br />
+<div class="main-wrapper">
+    <div class="card-container">
+      <div class="card card-center">
+        <h3>{{ $person->first_name }} {{ $person->last_name }} </h3>
+        <pre>{{ $person->email }}</pre>
+        <p>{{ $person->dob }}</p>
         {{-- $person->favorites --}}
-      </div>
+        <h4>Person Favorites</h4>
+        @foreach ($person->favorites as $favorite)
+          <div>
+            {{ $favorite->name }}</div>
+        @endforeach
     </div>
+    {{-- assigned badges --}}
+    <div class="card">
+        <div class="card-body">
+            <h3>Assigned badges</h3>
+            <hr>
+           @forelse ($person->assignedBadges as $badge)
+           <div class="flex items-center">
+            <div>
+              <img src="{{ $badge->graphic }}" width="40" alt="">
+            </div>
+            <div>
+               <pre>{{ $badge->name }}</pre>
+            </div>
+        </div>
+           @empty
+              <div>
+                  <h3>No Assigned Badges</h3>  
+              </div>               
+           @endforelse
+        </div>
+    </div>
+    {{-- end assigned badges --}}
+    </div>
+    <a href="/dashboard" class="btn btn-sm">Back</a>
 </div>
 
 @endsection
