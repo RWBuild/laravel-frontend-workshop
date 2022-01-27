@@ -70,7 +70,7 @@
 
 <body>
     <!--navbar-->
-    @extends('Components.layout')
+    @extends('components.layout')
     <!--End of navbar-->
     <!--Favorites-->
     @section('content')

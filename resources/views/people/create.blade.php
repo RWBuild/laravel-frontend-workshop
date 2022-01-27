@@ -451,7 +451,7 @@
 
 <body class="antialiased">
     <!--navbar-->
-    @extends('Components.layout')
+    @extends('components.layout')
     <!--End of navbar-->
     <!--Add Person Form-->
     @section('content')

@@ -407,7 +407,7 @@
     <!--nav bar-->
     <div class="navbar">
         <ul>
-            <li><a href="#">Home</a><br></li>
+            <li><a href="/views/welcome">Home</a><br></li>
             <li><a href="http://">People added</a><br></li>
             <li><a href="http://">Dashboard</a><br></li>
             <li><a href="http://">Assign Badges</a><br></li>
