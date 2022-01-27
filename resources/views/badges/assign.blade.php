@@ -10,7 +10,7 @@
 
         <select name="badge_id" id="">
             @foreach($badges as $badge)
-              <option value="{{ $badge->id }}">{{$badge->name}}</option>
+              <option value="{{ $badge->id }}">{{$badge->name}}</option>    
             @endforeach
 
         </select>
