@@ -1,57 +1,69 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layout.app')
+
+@section('content')
+
+
      <!-- body -->
      <div class="container">
-        <!-- <div class="circle"></div> -->
-    
        
-        <div class="inner-container">
-
-            <div class="image">
-             <img src="./assets/login.png"/>
-            </div>
+        <header> Add Peaple </header>
+       
+        
         <form class="loginform" name="form" method="POST" action="/people">
-                  @csrf
+            @csrf 
             <div class="input-field">
-                <label>firstname </label>
-                <input type="text" id="email" name="  first_name" required>
+                {{-- <label>firstname </label> --}}
+                <input type="text" id="email" name="  first_name"  placeholder="firstname">
+                <div class="error">
+                    @error('first_name')
+                    {{ $message }}
+                @enderror
+                </div>
+              
 
                 
             </div>
 
             <div class="input-field">
-                <label> lastname</label>
-                <input class="pswrd" type="text" id="pass"  name="last_name" required>
-
+                {{-- <label> lastname</label> --}}
+                <input class="pswrd" type="text" id="pass"  name="last_name" placeholder="lastname">
+                <div class="error">
+                    @error('last_name')
+                    {{ $message }}
+                @enderror
+                </div>
+             
                 
             </div>
             <div class="input-field">
-                <label>Email </label>
-                <input type="text" id="email" name="email" required>
-
+                {{-- <label>Email </label> --}}
+                <input type="text" id="email" name="email" placeholder="Email">
+                <div class="error">
+                    @error('email')
+                    {{ $message }}
+                @enderror
+                </div>
+             
                 
             </div>
             <div class="input-field">
-                <label>Date </label>
-                <input type="date" id="email" name="dob" required>
+                {{-- <label>Date </label> --}}
+                <input type="date" id="email" name="dob" placeholder="Date">
+                <div class="error">
+                    @error('dob')
+                    {{ $message }}
+                @enderror
 
+                </div>
+              
                 
             </div>
 
             <div class="button">
-
-                <button type="submit"  name=""  >Add</button>
+                <button class="button" >Add</button>
             </div>
         </form>
 
     </div>
-</body>
-</html>
+    @endsection
