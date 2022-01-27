@@ -35,12 +35,25 @@ class PersonTest extends TestCase
     public function test_guest_user_can_add_a_new_person()
     {
         $response = $this->post('/people', [
-            'first_name' => 'Vainqueur',
-            'last_name' => 'Bihame',
+            'first_name' => 'John',
+            'last_name' => 'Doe',
             'dob' => '1990-09-19',
-            ''
+            'email' => 'johndoe@gmail.com'
         ]);
 
-        $response->assertStatus(200);
+        $response->assertRedirect('/people');
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function test_cannot_create_an_account_without_required_fields()
+    {
+        $response = $this->post('/people', ['first_name' => 'John']);
+
+        $response->assertSessionHasErrors(['email', 'dob', 'last_name']);
+
+        $response->assertStatus(302);
     }
 }
