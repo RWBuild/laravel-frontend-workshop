@@ -11,4 +11,9 @@ class Favorite extends Model
 
     protected $guarded = [];
 
+
+    public function person()
+    {
+        return $this->belongsTo(Person::class);
+    }
 }
