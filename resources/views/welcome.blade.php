@@ -19,14 +19,18 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+         <link rel="stylesheet" href={{ mix('css/app.css')}}>
+
     </head>
-    <body class="antialiased">
+    <body>
        <div class="oft">
-           <h1>homepage</h1>
-           <a href="/people/create"> Add person</a></br>
-           <a href="/favorites/create"> Add Favourites</a></br>
-           <a href="Dashboard"> Dashboard</a></br>
-           <a href="Assign Badges"> Assign Badges</a><br>
+                 <h1>Homepage</h1>
+                 <div>
+                     <a href="/people/create"> Add person</a></br>
+                     <a href="/favorites/create"> Add Favourites</a></br>
+                      <a href="Dashboard"> Dashboard</a></br>
+                      <a href="Assign Badges"> Assign Badges</a>
+                 </div>
        </div>
     </body>
 </html>

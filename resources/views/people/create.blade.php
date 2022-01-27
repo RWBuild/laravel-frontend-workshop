@@ -1,21 +1,25 @@
 
 <!DOCTYPE html>
 <html>
+    <head>
+
+        <link rel="stylesheet" href={{ mix('css/app.css')}}>
+    </head>
 <body>
 
-<h2>Add person</h2>
-<form method="POST" action="/people">
-    @csrf
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="first_name"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="last_name"><br>
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email"><br>
-    <label for="dob">Dob:</label><br>
-    <input type="date" id="dob" name="dob"><br>
-    <button type="submit">SUBMIT</button>
-  </form>
+
+    <div class="container">
+        <form method="POST" action="/people">
+            @csrf
+            <h2>Add person</h2>
+            <input type="text" id="fname" name="first_name" placeholder="First name" required><br>
+            <input type="text" id="lname" name="last_name"placeholder="Last name" required><br>
+            <input type="text" id="email" name="email"placeholder="Email" required><br>
+            <input type="date" id="dob" name="dob"placeholder="Dob"><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
 </body>
 </html>
 
