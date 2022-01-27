@@ -25,7 +25,7 @@
         <div class="homePage">
             {{-- header --}}
             <div class="homePage_header">
-                <h1>Home page</h1>
+                <h1>RWBuild</h1>
             </div>
             {{-- Link --}}
             <div class="homePage_links">
