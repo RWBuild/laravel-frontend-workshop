@@ -11,10 +11,10 @@ h2{
 
 }
 .background{
-    background-color:rgb(2, 19, 2);
+    background-color:rgb(8, 39, 8);
     }
 
-/* style for content  */
+/* style for  all content  */
 .content-childreen{
     min-height:60vh;
     display:flex;
@@ -23,7 +23,7 @@ h2{
     justify-content: center;
  
 }
-/* end of style for content  */
+/* end of style for all content  */
 .nav-bar{
     width:100%;
     padding:1rem;

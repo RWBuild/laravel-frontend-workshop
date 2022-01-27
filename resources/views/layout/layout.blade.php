@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    {{-- <navigation bar start from here> --}}
     <nav>
         <div class="nav-bar background">
             <a id="logo">
@@ -34,7 +35,7 @@
     {{-- content will be displayed here --}}
     <div class="content-childreen">
 
-    @yield('content')
+        @yield('content')
 
     </div>
     {{-- content will be displayed here --}}
@@ -44,7 +45,7 @@
     {{-- footer start here --}}
     <footer>
         <div class="footer background">
-            
+
 
         </div>
         <div class="footer-bottom">

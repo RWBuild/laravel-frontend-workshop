@@ -17,12 +17,17 @@
                 </select>
                 <input type="text" placeholder="Add favorite" name="name" />
                 @error('name')
-                    {{ message }}
+                    <div class="message-color">
+                        {{ $message }}
+                    </div>
                 @enderror
+              
                 <textarea type="text" placeholder="Description" name="description" rows='4' cols="50"></textarea>
-                @error('name')
-                    {{ message }}
-                @enderror
+                @error('description')
+                <div class="message-color">
+                    {{ $message }}
+                </div>
+            @enderror
                 <div class="button">
                     <button type="submit">Submit</button>
                 </div>
