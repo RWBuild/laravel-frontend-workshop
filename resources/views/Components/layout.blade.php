@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>,
+    <link rel="stylesheet" href={{ mix('css/app.css') }}>
     <!-- Styles -->
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -404,33 +401,27 @@
         }
 
     </style>
-    <!--css link-->
-    {{-- <link rel="stylesheet" href={{ mix('css/app.css') }}> --}}
 </head>
 
-<body class="antialiased">
-    @extends('Components.layout')
-    @section('content')
-        <!--Landing Page-->
-        <div class="LandingPage">
-            <div class="Text">
-                <h1>Welcome!</h1>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio labore temporibus facere quaerat minima ratione vel
-                    explicabo at ab culpa aperiam tempore, placeat perferendis
-                    numquam, pariatur repellendus deleniti quae architecto!</p>
-            </div>
-            <div class="Button">
-                <ul>
-                    <li><a href="/people/create">Add person</a></li>
-                    <li><a href="/favorites/create">Add favorites</a></li>
-                </ul>
-            </div>
-
-        </div>
-        <!--End of Landing page-->
-    @endsection
+<body>
+    <!--nav bar-->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a><br></li>
+            <li><a href="http://">People added</a><br></li>
+            <li><a href="http://">Dashboard</a><br></li>
+            <li><a href="http://">Assign Badges</a><br></li>
+        </ul>
+    </div>
+    <!--End of navbar-->
+    <!--page-->
+    @yield('content')
+    <!--End of landing-->
+    <!--Footer-->
+    {{-- <footer>
+        Hello World
+    </footer> --}}
+    <!--End of Footer-->
 </body>
 
 </html>

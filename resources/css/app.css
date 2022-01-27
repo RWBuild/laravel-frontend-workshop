@@ -1,7 +1,71 @@
-*{
+* {
     padding: auto;
     margin: auto;
+    box-sizing: border-box;
 }
-a:hover{
-    color: green;
+body{
+    background-image: url("../images/pic1.jpg");
+    background-position: cover;
+    height: 300px;
 }
+/*navbar styles*/
+.navbar a:hover {
+    color: rgb(155, 155, 204);
+}
+.navbar{
+    height: 80px;
+    position: fixed;
+    right: 10px;
+    top: 0;
+
+
+}
+.navbar ul {
+    list-style: none;
+    overflow: hidden;
+    float: right;
+}
+.navbar li{
+    display: inline-block;
+    padding: 30px;
+    padding-top: 25px;
+    font-size: 20px;
+
+}
+/*End of navbar styles*/
+
+.LandingPage{
+   text-align: center;
+   padding: 60px;
+}
+.LandingPage ul{
+    list-style: none;
+}
+.Text h1{
+    font-size: 80px;
+    padding-top: 100px;
+}
+.Text p{
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+    font-size: 25px;
+}
+.Button ul{
+    margin-right: 30px;
+}
+.Button li{
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    background-color: rgb(155, 155, 204);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 200px;
+    font-size: 25px;
+}
+.Button li:hover{
+    background-color: rgb(255, 255, 255);
+}
+/*End of landing-page styles*/
