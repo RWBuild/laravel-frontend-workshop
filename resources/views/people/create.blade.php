@@ -394,67 +394,14 @@
     </style>
 
 
-    <style>
-        body {
-            background: #ecf1f4;
-            font-family: 'Nunito', sans-serif;
-        }
-
-        .form-wrap {
-            width: 476px;
-            padding: 70px 70px;
-            background-color: white;
-            box-sizing: border-box;
-            position: fixed;
-            left: 33%;
-            top: 11%;
-            translate: (-50% -50%);
-
-        }
-
-        h1 {
-            text-align: center;
-            color: black;
-            font-weight: normal;
-            margin-bottom: 40px;
-        }
-
-        input {
-            width: 100%;
-            background: none;
-            border: 1px solid black;
-            border-radius: 3px;
-            padding: 6px 15px;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        button {
-            width: 100%;
-            background: none;
-            border-radius: 3px;
-            padding: 6px 15px;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: rgb(155, 155, 204);
-            cursor: pointer;
-        }
-
-    </style>
+    
     {{-- <!--css link--> --}}
-    <link rel="stylesheet" href={{ mix('css/app.css') }}>
+    {{-- <link rel="stylesheet" href={{ mix('css/app.css') }}> --}}
     <title>Add Person</title>
 </head>
 
 <body class="antialiased">
-    <!--navbar-->
-    @extends('components.layout')
-    <!--End of navbar-->
     <!--Add Person Form-->
-    @section('content')
         <div class="form-wrap">
             <form action="/people" method="post">
                 @csrf
@@ -466,7 +413,6 @@
                 <button type="submit">Add</button>
             </form>
         </div>
-    @endsection
 </body>
 
 </html>

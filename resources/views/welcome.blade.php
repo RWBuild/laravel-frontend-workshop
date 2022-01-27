@@ -409,28 +409,19 @@
 </head>
 
 <body class="antialiased">
-    @extends('Components.layout')
-    @section('content')
         <!--Landing Page-->
         <div class="LandingPage">
-            <div class="Text">
-                <h1>Welcome!</h1>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio labore temporibus facere quaerat minima ratione vel
-                    explicabo at ab culpa aperiam tempore, placeat perferendis
-                    numquam, pariatur repellendus deleniti quae architecto!</p>
-            </div>
             <div class="Button">
                 <ul>
                     <li><a href="/people/create">Add person</a></li>
                     <li><a href="/favorites/create">Add favorites</a></li>
+                    <li><a href="/badges/assign">Assign Badges</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
                 </ul>
             </div>
 
         </div>
         <!--End of Landing page-->
-    @endsection
 </body>
 
 </html>
