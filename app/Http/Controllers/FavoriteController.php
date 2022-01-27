@@ -31,4 +31,10 @@ class FavoriteController extends Controller
         return view('favorites.create', compact('people'));
     }
 
+    public function index()
+    {
+        $favorites = Favorite::all();
+
+        return view('favorites.index', compact('favorites'));
+    }
 }
