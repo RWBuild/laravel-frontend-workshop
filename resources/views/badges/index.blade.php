@@ -6,7 +6,10 @@
         @foreach ($badges as $badge)
         <ul>
             <li>
+        {{$$badge->graphic}}        
         {{$badge->name}} 
+        {{$badge->description}}
+
             </li>
         <ul> 
         @endforeach
