@@ -26,6 +26,10 @@ Route::get('/favorites/create', 'FavoriteController@create')->name('favorites.cr
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 
+Route::get('/badges/assign', 'BadgeController@assign')->name('badges.assign-form');
+
 Route::resource('/badges', 'BadgeController');
+
+
 Route::post('/badges/assign-to-person', 'BadgeController@assignToPerson')
     ->name('badges.assign-to-user');

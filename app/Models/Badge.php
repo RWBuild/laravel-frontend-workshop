@@ -12,10 +12,9 @@ class Badge extends Model
     protected $guarded = [];
 
 
-    public function peopleBadges()
+    public function assignedPeople()
     {
-        return $this->belongsToMany(Person::class);
+        return $this->belongsToMany(Person::class, 'people_badges', 'badge_id', 'person_id')
+        ->withTimestamps();
     }
-
-
 }

@@ -18,6 +18,7 @@ class Person extends Model
 
     public function assignedBadges()
     {
-        return $this->belongsToMany(Badge::class);
+        return $this->belongsToMany(Badge::class, 'people_badges', 'person_id', 'badge_id')
+        ->withTimestamps();
     }
 }

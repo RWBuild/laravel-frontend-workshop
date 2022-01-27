@@ -94,7 +94,7 @@ class BadgeController extends Controller
     {
         $badge = Badge::find($request->badge_id);
 
-        $badge->peopleBadges()->attach($request->person_id);
+        $badge->assignedPeople()->attach($request->person_id);
 
         return redirect()
             ->route('dashboard.index')
