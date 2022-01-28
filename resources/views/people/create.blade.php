@@ -1,11 +1,11 @@
 @extends('layout.layout')
 @section('content')
 
-    <div class="create-person-container">
+    <div class="create-person">
         <h2> Add a Person </h2>
         <form method="POST" action="/people">
             @csrf
-            <div class="form">
+            <div class="all-form">
                 <input type="text" placeholder="First Name" name="first_name" />
                 @error('first_name')
                     {{-- to get the error message --}}

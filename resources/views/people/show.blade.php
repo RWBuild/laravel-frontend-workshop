@@ -1,17 +1,17 @@
 @extends('layout.layout')
 @section('content')
 <div class="content-childreen">
-    <h2> Favorites Added Sussessfully </h2>
+    <h2>{{ $person->first_name }} Informations</h2>
 
-    Name: {{ $person->first_name }}  <br />
-    Last name : {{ $person->last_name }} <br/>
+    <p>First Name: {{ $person->first_name }} {{ $person->last_name }}</p>
+    Last Name : {{ $person->last_name }} <br/>
     DOB: {{ $person->dob }} <br />
     {{-- $person->favorites --}}
     @foreach($person->favorites as $favorite)
-    {{$favorite->name}}
+     Favorite:{{$favorite->name}}
         
     @endforeach
-    {{-- @foreach($person->badges as $badge)
+    {{-- @foreach($badge->badges as $badge)
     <img src="{{$badge->graphic}}" width="50"/>
     {{$badge->name}}
     {{$badge->Description}}

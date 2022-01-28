@@ -5,7 +5,7 @@
         <h2> Add Favorite</h2>
         <form method="POST" action="/favorite/assign-to-person">
             @csrf
-            <div class="form">
+            <div class="all-form">
 
                 <select name="person_id" id="person_id">
                     @foreach ($people as $person)

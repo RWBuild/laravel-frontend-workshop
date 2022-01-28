@@ -33,7 +33,7 @@
     </nav>
 
     {{-- content will be displayed here --}}
-    <div class="content-childreen">
+    <div class="content-children">
 
         @yield('content')
 
@@ -45,12 +45,11 @@
     {{-- footer start here --}}
     <footer>
         <div class="footer background">
-
-
+            <div class="footer-bottom">
+                <p>&copy copyright RWBuild Workshop 2022</p>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy copyright RWBuild Workshop 2022</p>
-        </div>
+
     </footer>
 </body>
 

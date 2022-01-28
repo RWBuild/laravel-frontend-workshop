@@ -2,7 +2,7 @@
 @section('content')
 
     
-        <h1>List of Badges</h1>
+        <h2>List of Badges</h2>
         <div class="allbadge">
         @foreach ($badges as $badge)
         <div class="badge-card">

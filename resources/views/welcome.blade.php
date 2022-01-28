@@ -1,10 +1,10 @@
 
 @extends('layout.layout')
 @section('content')
-<div class="welcome-container">
+<div class="welcome">
  <h2>Welcome to Home Page</h2>
  
- <div class="container-route">
+ <div class="route">
     <a href="/people/create">Add Person</a>
      
  <a href="/favorites/create">Add Favorites</a>

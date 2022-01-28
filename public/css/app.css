@@ -10,21 +10,25 @@ h2{
     padding: 25px;
 
 }
+
 .background{
-    background-color:rgb(8, 39, 8);
+    background-color:rgb(3, 17, 3);
     }
 
-/* style for  all content  */
-.content-childreen{
-    min-height:120vh;
+/* ||************************************* style for all content************|| */    
+
+.content-children{
+    min-height:70vh;
     display:flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    margin-bottom: 100px;
+  
  
 }
-/* end of style for all content  */
+/* ||************************************* style for all content end ************|| */ 
+/* ||************************************* nav bar style ************|| */    
+
 .nav-bar{
     width:100%;
     padding:1rem;
@@ -32,7 +36,6 @@ h2{
     left:0;
     display: flex;
     justify-content: space-around;
-    /* position:fixed; */
     padding: 30px;
   
 }
@@ -47,18 +50,20 @@ h2{
 
 
 }
-/* end of nav style */
-/* welcome page style */
-.welcome-container a{
+/* ||*************************************  end of nav style ************|| */    
+
+/* ||************************************* home page************|| */    
+
+.welcome a{
     padding:10px;
 
 }
-.welcome-container a:hover{
+.welcome a:hover{
     padding:10px;
     color:rgb(2, 19, 2);
 
 }
-.container-route{
+.route{
 
     display: flex;
     align-items: center;
@@ -68,12 +73,13 @@ h2{
    
 }
 
-/* end of welcome style */
+/* ||************************************* end of home page************|| */    
 
 
-/* create people style  */
 
-.create-person-container{
+/* ||************************************* create people page************|| */  
+
+.create-person{
     height: 70vh;
     display:flex;
     flex-direction:column;
@@ -82,19 +88,17 @@ h2{
     
   
 }
-/* end of people style  */
-.form{
+/* ||************************************* create people page end************|| */  
+
+.all-form{
     display:flex;
     flex-direction:column;
     align-items:center;
     width:500px;
     padding:20px;
     box-shadow: 5px 0px 10px 8px #8888;
-
-
-    /* width:100%; */
 }
-.form input,textarea,select {
+.all-form input,textarea,select {
     width: 80%;
     padding: 12px;
     display: inline-block;
@@ -104,36 +108,51 @@ h2{
     border-radius: 5px;
   }
   
-  .form button{
+  .all-form button{
       padding:15px;
       font-size: 16px;
       border-radius:5px;
       border:2px solid rgb(2, 19, 2);
       width: 150px;
   }
-  .form button:hover{
+  .all-form button:hover{
    
     background-color:rgb(2, 19, 2);
     width: 150px;
     color:white;
 }
+
+
 .message-color{
     color:red
 }
 .action-delete{
-    /* padding-left: 200px; */
     color:red;
     display: flex;
     flex-direction:column;
 }
+
+/* ||************************************* people list page************|| */
+table,th,td{
+    border:1px solid rgb(190, 178, 178);
+    border-collapse: collapse;
+    padding: 10px;
+   
+}
+.action{
+    display: flex;
+    flex-direction: row;
+}
 .action-view{
-    /* padding-left: 200px; */
+    padding: 5px;
     color:blue;
     display: flex;
     flex-direction:column;
 }
-/* add person style */
-/* style for badges card */
+/* ||************************************* people list page end************|| */
+
+
+/* ||************************************* all badges list page************|| */
 .allbadge{
     /* background-color: rgb(255, 81, 0); */
     width:100%;
@@ -154,25 +173,41 @@ h2{
     box-shadow: 5px 0px 10px 8px #8888;
     
 }
-/* style for badges card  end*/
-/* dashboard style  */
+/* ||************************************* all badges list page end ************|| */
+/* ||************************************* all favorites list page end ************|| */
+.all-favorites table{
+    width: 100%;
+}
+/* ||************************************* all favorites list page end ************|| */
+
+
+
+/* ||************************************* Dashboard  ************|| */
 .dashboard{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
     width:100%;
-   
-    /* background-color: blue; */
+  
 
 }
 .dashboard-left{
-    background-color: black;
-    width:30%;
+    background-color: rgba(5, 1, 24, 0.993);
+    width:20%;
     display: flex;
     flex-direction: column;
-    color:whitesmoke;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
 
+    
+
+}
+.dashboard-left a{
+
+    color:whitesmoke;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
 }
 .dashboard-right{
     display: flex;
@@ -183,25 +218,36 @@ h2{
 
     
 }
-.total-people,.favorites,.badges{
-    width:30%;
+.total{
+    width:40%;
     box-shadow: 5px 0px 10px 8px #8888;
     display: flex;
     flex-direction:column;
+    align-items: center;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
     font-size:54px;
     margin:10px;
     height: 40vh;
-    /* text-decoration: none; */
+    color:#333;
+
 
 }
-/* dashboard style end  */
+.total:hover{
+    background-color: rgb(2, 19, 2);
+    color:white;
+}
+.total p{
+    font-size: 97px;
+    font-weight: bold;
+}
+/* ||************************************* Dashboard  end ************|| */
+
 /* footer style */
 .footer{
-    margin-top:2000px;
+    margin-top:50px;
     bottom:0;
-    position:fixed;
     width:100%;
     color:white;
     padding:12px;
@@ -213,12 +259,5 @@ h2{
   
 
 }
-.footer-bottom{
-    bottom:0;
-    /* position:fixed; */
-    width:100%;
-    text-align: center;
-    color: white;
-    
-}
+
 
