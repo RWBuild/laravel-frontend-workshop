@@ -31,8 +31,8 @@
             <div class="homePage_links">
                 <a href="/people/create">1. Add person</a>
                 <a href="/favorites/create">2. Add Favorites</a>
-                <a href="#">3. Dashboard</a>
-                <a href="#">4. Assign badges</a>
+                <a href="/dashboard">3. Dashboard</a>
+                <a href="/badges/assign">4. Assign badges</a>
             </div>
         </div>
     </body>

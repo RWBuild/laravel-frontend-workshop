@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('my-components', function () {
+    return view('my_components');
+});
+
+
 Route::resource('/people', 'PersonController');
 
 Route::get('/favorites', 'FavoriteController@index')->name('favorites.index');
@@ -34,3 +39,4 @@ Route::resource('/badges', 'BadgeController');
 
 Route::post('/badges/assign-to-person', 'BadgeController@assignToPerson')
     ->name('badges.assign-to-user');
+
