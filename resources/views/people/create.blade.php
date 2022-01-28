@@ -394,25 +394,38 @@
     </style>
 
 
-    
+
     {{-- <!--css link--> --}}
-    {{-- <link rel="stylesheet" href={{ mix('css/app.css') }}> --}}
+    <link rel="stylesheet" href={{ mix('css/app.css') }}>
     <title>Add Person</title>
 </head>
 
 <body class="antialiased">
-    <!--Add Person Form-->
-        <div class="form-wrap">
+    {{-- NavBar --}}
+    @extends('components.navbar')
+    {{-- End of Navbar --}}
+    @section('content')
+        <!--Add Person Form-->
+        <div class="center">
+            <h1>Add a person</h1>
             <form action="/people" method="post">
                 @csrf
-                <h1>Add a person</h1>
-                <input type="text" name="first_name" placeholder="Enter your First-name" required>
-                <input type="text" name="last_name" placeholder="Enter your Last-name" required>
-                <input type="text" name="email" placeholder="Add your email" required>
-                <input type="date" name="dob" required>
-                <button type="submit">Add</button>
+                <div class="txt_field">
+                    <input type="text" name="first_name" placeholder="Enter your FirstName.." required>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="last_name" placeholder="Enter your LastName.." required>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="email" placeholder="Add your email.." required>
+                </div>
+                <div class="txt_field">
+                    <input type="date" name="dob" required>
+                    <input type="submit" value="Add">
+                </div>
             </form>
         </div>
+    @endsection
 </body>
 
 </html>

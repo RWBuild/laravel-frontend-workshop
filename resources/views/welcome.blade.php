@@ -405,23 +405,14 @@
 
     </style>
     <!--css link-->
-    {{-- <link rel="stylesheet" href={{ mix('css/app.css') }}> --}}
+    <link rel="stylesheet" href={{ mix('css/app.css') }}>
 </head>
-
 <body class="antialiased">
-        <!--Landing Page-->
-        <div class="LandingPage">
-            <div class="Button">
-                <ul>
-                    <li><a href="/people/create">Add person</a></li>
-                    <li><a href="/favorites/create">Add favorites</a></li>
-                    <li><a href="/badges/assign">Assign Badges</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                </ul>
-            </div>
-
-        </div>
-        <!--End of Landing page-->
+    {{-- NavBar --}}
+    @extends('components.navbar')
+    {{-- End of Navbar --}}
+    @section('content')
+    @endsection
 </body>
 
 </html>

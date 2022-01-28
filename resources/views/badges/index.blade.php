@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Badges</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    {{-- NavBar --}}
+    @extends('components.navbar')
+    {{-- End of Navbar --}}
+    @section('content')
+    {{-- <table>
+        <tr>
+            <th>Graphics</th>
+            <th>Name</th>
+        </tr>
+        @foreach ($badges as $badge)
+            <tr>
+                <td><img src="{{ $badge->graphic }}" alt="image"></td>
+                <td>{{ $badge->name }}</td>
+            </tr>
+        @endforeach
+    </table> --}}
+    {{-- <div class="card_set">
+
+        <!--card1 -->
+
+        <div class="card">
+            @foreach ($badges as $badge)
+                <img src="{{ $badge->graphic }}" alt="image">
+                <h4>{{ $badge->name }}</h4>
+
+            @endforeach
+        </div>
+        </div> --}}
+        <div class="main">
+            {{-- cards --}}
+            @foreach ($badges as $badge)
+            <div class="card" id="badge_card">
+                <div class="badge_image">
+                    <img src="{{ $badge->graphic }}" alt="image">
+                </div>
+                <div class="badge_title">
+                    <h4>{{ $badge->name }}</h4>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    @endsection
+</body>
+</html>

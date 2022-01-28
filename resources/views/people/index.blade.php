@@ -397,17 +397,36 @@
         }
 
     </style>
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-
-    </style>
 </head>
 
 <body class="antialiased">
-    <h1>'Sup people</h1>
+    {{-- NavBar --}}
+    @extends('components.navbar')
+    {{-- End of Navbar --}}
+    @section('content')
+    <table>
+        <tr class="header">
+          <th>FirstName</th>
+          <th>Lastname</th>
+          <th>Assigned badges</th>
+          <th>delete option</th>
+        </tr>
+        @foreach ($people as $person)
+            <tr>
+                <td>{{ $person->first_name }}</td>
+                <td>{{ $person->last_name }}</td>
+                <td>
+                    @foreach($person->assignedBadges as $badge)
+                        <div>{{$badge->name}}</div>
+                    @endforeach
+                </td>
+                <td><form action="{{route('people.destroy',$person->id)}}" method="POST">
+                @csrf
+            @method('DELETE')<button type="submit" class="delButton">Delete</button></form></td>
+            </tr>
+        @endforeach
+      </table>
+      @endsection
 </body>
 
 </html>
