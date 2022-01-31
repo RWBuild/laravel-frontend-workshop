@@ -1,12 +1,12 @@
 @extends('layout.app')
 @section('content')
- <div class="wrapper">
-     <div class="center-box">
-         <h3>Assign a badge</h3>
+ <div class="w-2/5 max-w-full my-0 mx-auto py-5">
+     <div class="text-center my-20">
+         <h3 class="text-xl font-bold uppercase">Assign a badge</h3>
         <div>
             <form action="{{ route('badges.assign-to-user') }}" method="POST">
                 @csrf
-                <div class="form-group">
+                <div class="py-4">
                     <select name="person_id">
                         <option>select person</option>
                         @forelse ($people as $person)
@@ -18,7 +18,7 @@
                         @endforelse
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="py-4">
                     <select name="badge_id">
                         <option>select badge</option>
                         @forelse ($badges as $badge)

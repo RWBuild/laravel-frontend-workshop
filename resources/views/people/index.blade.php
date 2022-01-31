@@ -1,22 +1,13 @@
 @extends('layout.app')
 @section('content')
-    <div class="main-wrapper">
-        {{-- <div class="popup">
-            <div class="card-body">
-                <h3>Are sure you want to delete?</h3>
-            </div>
-            <div>
-                <a href="#" id="close" class="btn">Close</a>
-                <button class="btn btn-danger">Delete</button>
-            </div>
-        </div> --}}
-        <h2>Total : {{ count($people) }}</h2>
-        <div class="card-container">
+    <div class="w-3/5 max-w-full my-0 mx-auto py-8">
+        <h2 class="text-2xl font-bold ">Total : {{ count($people) }}</h2>
+        <div class="flex flex-wrap">
             @foreach ($people as $person)
             <div class="card">
                 <div class="card-body">
-                    <h4>{{ $person->first_name  }}</h4>
-                    <p>{{ $person->email }}</p>
+                    <h4 class="text-lg font-semibold">{{ $person->first_name  }}</h4>
+                    <p class="py-1">{{ $person->email }}</p>
                     <a href="/people/{{ $person->id }}" class="btn btn-sm">view</a>
                 </div>
                 
@@ -25,7 +16,7 @@
                 >
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="submit" class="btn bg-red-500 btn-sm">Delete</button>
                 </form>
                 
             </div>

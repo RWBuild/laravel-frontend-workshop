@@ -1,9 +1,9 @@
 @extends('layout.app')
 @section('content')
-<div class="wrapper">
-    <div class="center-box">
-     <div>
-         <h1>CRM</h1>
+<div class="flex justify-center items-center h-screen">
+    <div class="text-center">
+     <div class="my-4">
+         <h1 class="text-3xl font-bold">CRM</h1>
      </div>
     <div>
      <a href="/people/create" class="btn">Add Person</a>

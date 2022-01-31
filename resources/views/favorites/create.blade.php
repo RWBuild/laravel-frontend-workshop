@@ -8,14 +8,14 @@
   <title>CREATE FAVORITES</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="center-box">
+  <div class="w-2/5 max-w-full my-0 mx-auto py-5">
+    <div class="text-center my-20">
       <div>
-        <h3>Add Favorites</h3>
+        <h3 class="text-xl font-bold uppercase">Add Favorites</h3>
         {{-- assign favorite to person form --}}
         <form action="/favorite/assign-to-person" method="POST">
           @csrf
-          <div class="form-group">
+          <div class="py-4">
             <select name="person_id" id="person_id">
               @forelse ($people as $person)
                   <option value="{{ $person->id }}">
@@ -26,7 +26,7 @@
               @endforelse
             </select>
           </div>
-          <div class="form-group">
+          <div class="py-4">
             <input type="text" name="type" id="type" placeholder="type"
             class="@error('type')
                 invalid
@@ -36,7 +36,7 @@
             <p class="error">{{ $message }}</p>   
            @enderror
           </div>
-          <div class="form-group">
+          <div class="py-4">
             <input type="text" name="name" id="name" placeholder="name of favorite"
             class="@error('name')
             invalid
@@ -46,7 +46,7 @@
             <p class="error">{{ $message }}</p>   
             @enderror
           </div>
-          <div class="form-group">
+          <div class="py-4">
             <textarea name="description" id="" cols="30" rows="10"
             class="@error('description')
             invalid

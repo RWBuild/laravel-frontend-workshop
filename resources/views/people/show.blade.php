@@ -1,14 +1,14 @@
 @extends('layout.app')
 @section('content')
-<div class="main-wrapper">
-    <div class="card-container">
+<div class="w-3/5 max-w-full my-0 mx-auto py-8">
+    <div class="flex flex-wrap">
       @component('components.card')
           @slot('content')
-          <h3>{{ $person->first_name }} {{ $person->last_name }} </h3>
+          <h3 class="text-lg font-semibold">{{ $person->first_name }} {{ $person->last_name }} </h3>
           <pre>{{ $person->email }}</pre>
-          <p>{{ $person->dob }}</p>
+          <p class="py-1">{{ $person->dob }}</p>
           {{-- $person->favorites --}}
-          <h4>Person Favorites</h4>
+          <h4 class="text-lg font-semibold">Person Favorites</h4>
           @foreach ($person->favorites as $favorite)
             <div>
               {{ $favorite->name }}</div>
@@ -20,9 +20,8 @@
     </div>
     {{-- assigned badges --}}
     <div class="card">
-        <div class="card-body">
-            <h3>Assigned badges</h3>
-            <hr>
+        <div class="card-body divide-y-2">
+            <h3 class="text-lg font-bold py-1">Assigned badges</h3>
            @forelse ($person->assignedBadges as $badge)
            <div class="flex items-center">
             <div>
@@ -34,7 +33,7 @@
         </div>
            @empty
               <div>
-                  <h3>No Assigned Badges</h3>  
+                  <h3 class="text-lg font-bold">No Assigned Badges</h3>  
               </div>               
            @endforelse
         </div>

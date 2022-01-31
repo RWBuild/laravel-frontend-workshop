@@ -1,15 +1,14 @@
 @extends('layout.app')
 @section('content')
-    <div class="main-wrapper">
-      <h1>Favorites</h1>
-      <h2>Total : {{ count($favorites) }}</h2>
-      <div class="card-container">
+    <div class="w-3/5 max-w-full my-0 mx-auto py-8">
+      <h1 class="text-3xl font-bold">Favorites</h1>
+      <h2 class="text-2xl font-bold ">Total : {{ count($favorites) }}</h2>
+      <div class="flex flex-wrap">
         @foreach ($favorites as $favorite)
             <a href="/favorites/{{ $favorite->id }}">
-              <div class="card">
+              <div class="card divide-y-2">
                 <pre>{{ $favorite->name }} - {{ $favorite->type }}</pre>
-                <hr>
-                <p>
+                <p class="py-1">
                   {{ $favorite->description }}
                 </p>
               </div>
