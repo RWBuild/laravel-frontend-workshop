@@ -1,10 +1,10 @@
 @extends('layout.app')
 
 @section('content')
-<div class="login_form">
+<div class="form_container">
 
-    <form action="{{ route('badges.assign-to-user') }}" method="POST">
-        <h1>Assign badge</h1>
+    <form action="{{ route('badges.assign-to-user') }}" method="POST" class="shadow_card form_card">
+        <h1 class="shodow_text text-3xl mb-5">Assign badge</h1>
         @csrf
         <span>
             @error('person_id')
@@ -29,7 +29,7 @@
                 <option value="{{$badge->id}}">{{$badge->name}}</option>
             @endforeach
         </select>
-        <button type="submit">assign</button>
+        <button type="submit" class="simple_button">assign</button>
     </form>
 </div>
 @endsection

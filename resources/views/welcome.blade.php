@@ -1,39 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.app')
 
-        <title>RWBuild frontend</title>
+@section('content')    
+    <div class="flex flex-col w-full h-height items-center justify-center">
+        {{-- Link --}}
+            <a class="w-1/5 p-2 mb-2 border border-gray-400 hover:bg-gray-200 rounded" href="/people/create">
+                1. Add person
+            </a>
+            <a class="w-1/5 p-2 mb-2 border border-gray-400 hover:bg-gray-200 rounded" href="/favorites/create">
+                2. Add Favorites
+            </a>
+            <a class="w-1/5 p-2 mb-2 border border-gray-400 hover:bg-gray-200 rounded" href="/dashboard">
+                3. Dashboard
+            </a>
+            <a class="w-1/5 p-2 mb-2 border border-gray-400 hover:bg-gray-200 rounded" href="/badges/assign">
+                4. Assign badges
+            </a>
+    </div>
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            
-        </style>
-        <link rel="stylesheet" href="{{mix('/css/app.css')}}">
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="homePage">
-            {{-- header --}}
-            <div class="homePage_header">
-                <h1>RWBuild</h1>
-            </div>
-            {{-- Link --}}
-            <div class="homePage_links">
-                <a href="/people/create">1. Add person</a>
-                <a href="/favorites/create">2. Add Favorites</a>
-                <a href="/dashboard">3. Dashboard</a>
-                <a href="/badges/assign">4. Assign badges</a>
-            </div>
-        </div>
-    </body>
-</html>

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
 </head>
+</head>
 <body>
     <style>
         body {
@@ -15,8 +16,8 @@
         }
     </style>
     <div>
-        <div class="homePage_header">
-            <h1>RWBuild</h1>
+        <div class="flex w-full items-center justify-center h-16 bg-primaryColor">
+            <h1 class="text-white text-3xl">RWBuild</h1>
         </div>
         @yield('content')
     </div>

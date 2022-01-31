@@ -1,30 +1,19 @@
 @extends('layout.app')
 
 @section('content')
-<div class="people_grid">
-    @foreach ($favorites as $fv)
+<div class="flex flex-wrap w-11/12 mx-auto">
+    @foreach ($favorites as $items)
         {{-- <div class="people_grid_temp">
-            <h3>{{$fv->name}}</h3>
-            <h4>{{$fv->person_id}}</h4>
-            <p>{{$fv->description}}</p>
+            <h3>{{$items->name}}</h3>
+            <h4>{{$items->person_id}}</h4>
+            <p>{{$items->description}}</p>
         </div> --}}
 
         @component('components.card')    
    
-            @slot('class')
-                
-            @endslot
-    
-            @slot('title')
-            {{$fv->name}}
-            @endslot
-            @slot('name')
-            {{$fv->name}}
-            @endslot
-            @slot('slot')
-            {{$fv->description}}
-            @endslot
-            @slot('action')
+            @slot('content')    
+                <h2 class="text-2xl">{{$items->name}}</h2>
+                <p>{{$items->description}}</p>
             @endslot
     
         @endcomponent

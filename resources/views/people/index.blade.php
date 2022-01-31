@@ -1,47 +1,30 @@
 @extends('layout.app')
 
 @section('content')
-<div class="people_grid">
+<div class="flex flex-wrap w-11/12 mx-auto">
     @foreach ($people as $people)
-        {{-- <div class="people_grid_temp">
-            <h4>{{$people->first_name}} {{$people->last_name}}</h4>
-            <p>{{$people->email}}</p>
-            <div>
-                <a href="/people/{{ $people->id }}">View</a>
-                <form action="{{route('people.destroy', $people)}}" method="POST">
-                    @method("DELETE")
-                    @csrf
-                    <button onclick="confirm('Are u sure u want to delete')" type="submit">Delete</button>
-                </form>
-            </div>
-        </div> --}}
 
         @component('components.card')    
-   
-            @slot('class')
+            @slot('content')
                 
-            @endslot
-    
-            @slot('title')
-            {{$people->first_name}} {{$people->last_name}}
-            @endslot
-            @slot('name')
-            @endslot
-            @slot('slot')
-            {{$people->email}}
-            @endslot
-            @slot('action')    
-                <a href="/people/{{ $people->id }}">View</a>
-                <form action="{{route('people.destroy', $people)}}" method="POST">
-                    @method("DELETE")
-                    @csrf
-                    <button onclick="return confirm('Are u sure u want to delete')" type="submit">Delete</button>
-                </form>
-            @endslot
+                <h3>{{$people->first_name}} {{$people->last_name}}</h3>
             
+                <p>{{$people->email}}</p>
+                <div class="flex mt-3">
+                    <a href="/people/{{ $people->id }}" class="bg-primaryColor py-1 px-5 mr-2 text-white rounded">
+                        View
+                    </a>
+                    <form action="{{route('people.destroy', $people)}}" method="POST">
+                        @method("DELETE")
+                        @csrf
+                        <button onclick="return confirm('Are u sure u want to delete')" type="submit" class="bg-red-800 text-white py-1 px-5 rounded">
+                            Delete
+                        </button>
+                    </form>
+                </div>  
+            @endslot
         @endcomponent
 
-        
     @endforeach
 </div>
 @endsection

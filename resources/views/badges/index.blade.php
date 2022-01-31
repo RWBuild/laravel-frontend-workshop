@@ -1,13 +1,17 @@
 @extends('layout.app')
 
 @section('content')
-<div class="people_grid">
-    @foreach ($badges as $bg)
-        <div class="people_grid_temp">
-            <img src="{{$bg->graphic}}" alt="">
-            <h4>{{$bg->name}}</h4>
-            <p>{{$bg->description}}</p>
-        </div>
-    @endforeach
+<div class="flex flex-wrap w-11/12 mx-auto">
+    @foreach ($badges as $items)
+    <a href="/badges/{{ $items->id }}">
+            @component('components.card')
+                @slot('content')
+                    <img src="{{$items->graphic}}" alt="">
+                    <h4>{{$items->name}}</h4>
+                    <p class="truncate">{{$items->description}}</p>
+                @endslot
+            @endcomponent
+        </a>
+        @endforeach
 </div>
 @endsection

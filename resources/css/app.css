@@ -1,137 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .form_container {
+      @apply w-full h-height flex items-center justify-center
+    }
+
+    .form_card {
+        @apply flex flex-col items-center w-96 p-5 border rounded mt-7
+    }
+
+    .simple_button {
+        @apply py-2 px-5 bg-primaryColor text-white rounded mt-3 mb-7
+    }
+  }
+
+  @layer utilities {
+    .shadow_card {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    .shodow_text {
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .transition_in_out {
+        transition: 1s ease-in-out;
+    }
+  }
+
+@layer base {
+    input, select,textarea {
+      @apply border border-inputColor px-2.5 rounded mb-5 outline-none
+    }
+    input {
+        @apply w-full h-12;
+    }
+    select {
+        @apply h-12 w-full
+    }
+    textarea {
+        @apply h-20 w-full
+    }
+    span {
+        @apply text-red-700
+    }
 }
-
-:root {
-    --primary-color: #346786;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.homePage {
-    display: flex;
-    flex-direction: column;
-}
-
-.homePage_header {
-    background-color: var(--primary-color);
-    width: 100%;
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-}
-
-.homePage_links {
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.homePage_links a {
-    color: #000000;
-    text-decoration: none;
-    width: 40vh;
-    padding: 10px;
-    border: 1px solid #797979;
-    margin-bottom: 10px;
-    border-radius: 3px;
-}
-
-.homePage_links a:hover {
-    background-color: #e6e6e6;
-}
+    
 
 
-.login_form {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login_form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-
-.login_form form h1 {
-    font-size: 25px;
-    font-weight: 400;
-    padding: 20px 40px;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.login_form form span {
-    color: red;
-}
-
-.login_form form input {
-    padding: 15px 10px;
-    width: 90%;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #9db9f3;
-}
-
-.login_form form select {
-    padding: 15px 10px;
-    width: 95%;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #9db9f3;
-}
-
-.login_form form textarea {
-    padding: 15px 10px;
-    width: 90%;
-    height: 70px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #9db9f3;
-}
-
-.login_form form button {
-    width: 90%;
-    padding: 12px 10px;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
-    margin: 10px 0 30px 0;
-    font-size: 20px;
-}
-
-.login_form form button:hover {
-    transform: scale(1.06);
-}
+/*
 
 
-.login_form input:focus {
-    outline: none;
-}
-
-.people_grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-}
 
 .people_grid_temp {
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
@@ -192,4 +112,4 @@ body {
 
 .one_people_fav img {
     width: 50%;
-}
+} */

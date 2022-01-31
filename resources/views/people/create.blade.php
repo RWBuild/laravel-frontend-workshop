@@ -2,10 +2,10 @@
 
 
 @section('content')
-<div class="login_form">
-    <form action="/people" method="POST">
+<div class="form_container">
+    <form action="/people" method="POST" class="shadow_card form_card">
         @csrf
-        <h1>Add people</h1>
+        <h1 class="shodow_text text-3xl mb-5">Add people</h1>
         <input type="text" name="first_name" placeholder="First name" >
         <span>
             @error('first_name')
@@ -30,7 +30,7 @@
             {{$message}}
             @enderror
         </span>
-        <button>Submit</button>
+        <button class="simple_button">Submit</button>
     </form>
 </div>
 @endsection

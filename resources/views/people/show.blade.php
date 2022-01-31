@@ -1,32 +1,37 @@
 @extends('layout.app')
 
 @section('content')
-<div class="one_people_page">
-    <div class="one_people">
 
-        Name: {{ $person->first_name }}  <br />
-        Last name : {{ $person->last_name }} <br/>
-        DOB: {{ $person->dob }} <br />
-        
-        @foreach ($person->favorites as $item)
-            <div class="one_people_fav">
-                {{$item->name}}
-            </div>
-        @endforeach
+<div class="flex w-full justify-center">
 
-    </div>
+    @component('components.card')
+        @slot('content')
+            Name: {{ $person->first_name }}  <br />
+            Last name : {{ $person->last_name }} <br/>
+            DOB: {{ $person->dob }} <br />
 
-    <div class="one_people">
-        @foreach ($person->assignedBadges as $item)
-        <h3>{{$item->name}}</h3>
-            <div class="one_people_fav">
-                <img src="{{$item->graphic}}" alt="">
-                <div>
-                    {{$item->type}}
+            @foreach ($person->favorites as $item)
+                <div class="one_people_fav">
+                    {{$item->name}}
                 </div>
-            </div>
-        @endforeach
-    </div>
+            @endforeach
+        @endslot
+    @endcomponent
+
+    @component('components.card')
+        @slot('content')
+                @foreach ($person->assignedBadges as $item)
+                    <h3>{{$item->name}}</h3>
+                    <div>
+                        <img src="{{$item->graphic}}" alt="">
+                        <div>
+                            {{$item->type}}
+                        </div>
+                    </div>
+                @endforeach
+        @endslot
+    @endcomponent
 
 </div>
+
 @endsection

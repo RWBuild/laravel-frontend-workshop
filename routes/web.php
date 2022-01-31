@@ -18,11 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('my-components', function () {
-    return view('my_components');
-});
-
-
 Route::resource('/people', 'PersonController');
 
 Route::get('/favorites', 'FavoriteController@index')->name('favorites.index');
