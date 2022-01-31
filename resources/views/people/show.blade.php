@@ -2,16 +2,21 @@
 @section('content')
 <div class="main-wrapper">
     <div class="card-container">
+      @component('components.card')
+          @slot('content')
+          <h3>{{ $person->first_name }} {{ $person->last_name }} </h3>
+          <pre>{{ $person->email }}</pre>
+          <p>{{ $person->dob }}</p>
+          {{-- $person->favorites --}}
+          <h4>Person Favorites</h4>
+          @foreach ($person->favorites as $favorite)
+            <div>
+              {{ $favorite->name }}</div>
+          @endforeach
+          @endslot
+      @endcomponent
       <div class="card card-center">
-        <h3>{{ $person->first_name }} {{ $person->last_name }} </h3>
-        <pre>{{ $person->email }}</pre>
-        <p>{{ $person->dob }}</p>
-        {{-- $person->favorites --}}
-        <h4>Person Favorites</h4>
-        @foreach ($person->favorites as $favorite)
-          <div>
-            {{ $favorite->name }}</div>
-        @endforeach
+       
     </div>
     {{-- assigned badges --}}
     <div class="card">
