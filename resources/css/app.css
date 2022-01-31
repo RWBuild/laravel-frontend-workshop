@@ -7,3 +7,10 @@
     margin: 0;
     padding: 0;
 }
+
+
+@layer components {
+    .card-section {
+        @apply mb-3 font-bold text-primary text-heading hover:text-red-900 transition-colors cursor-pointer;
+    }
+}
