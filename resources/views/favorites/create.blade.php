@@ -3,11 +3,11 @@
 
 @section('content')
 
-<div class="container">
+<div class="bg-gray-100 flex flex-col justify-center items-center min-h-screen">
        
-    <header>Add Favorites </header>
+    <header class="font-bold text-4xl text-center text-gray-700" >Add Favorites </header>
             
-    <form class="loginform" name="form" method="POST" action="/favorite/assign-to-person">
+    <form class="" name="form" method="POST" action="/favorite/assign-to-person">
        
 
         @csrf
@@ -60,7 +60,7 @@
         </div>
        
      
-        <div >
+        <div class="flex justify-center items-center">
             <button class="button" >Add</button>
         </div>
        

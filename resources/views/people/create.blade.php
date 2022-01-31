@@ -5,15 +5,15 @@
 
 
      <!-- body -->
-     <div class="container">
+     <div class=" bg-gray-100 flex flex-col justify-center items-center min-h-screen">
        
-        <header> Add Peaple </header>
+        <header class="font-bold text-4xl text-center text-gray-700"> Add People </header>
        
         
-        <form class="loginform" name="form" method="POST" action="/people">
+        <form class="" name="form" method="POST" action="/people">
             @csrf 
-            <div class="input-field">
-                {{-- <label>firstname </label> --}}
+            <div class=" ">
+              
                 <input type="text" id="email" name="  first_name"  placeholder="firstname">
                 <div class="error">
                     @error('first_name')
@@ -25,9 +25,9 @@
                 
             </div>
 
-            <div class="input-field">
-                {{-- <label> lastname</label> --}}
-                <input class="pswrd" type="text" id="pass"  name="last_name" placeholder="lastname">
+            <div class=" ">
+               
+                <input class="" type="text" id="pass"  name="last_name" placeholder="lastname">
                 <div class="error">
                     @error('last_name')
                     {{ $message }}
@@ -36,9 +36,9 @@
              
                 
             </div>
-            <div class="input-field">
-                {{-- <label>Email </label> --}}
-                <input type="text" id="email" name="email" placeholder="Email">
+            <div class=" ">
+          
+                <input class="" type="text" id="email" name="email" placeholder="Email">
                 <div class="error">
                     @error('email')
                     {{ $message }}
@@ -47,9 +47,9 @@
              
                 
             </div>
-            <div class="input-field">
-                {{-- <label>Date </label> --}}
-                <input type="date" id="email" name="dob" placeholder="Date">
+            <div class=" ">
+              
+                <input class="" type="date" id="email" name="dob" placeholder="Date">
                 <div class="error">
                     @error('dob')
                     {{ $message }}
@@ -60,8 +60,8 @@
                 
             </div>
 
-            <div >
-                <button class="button" >Add</button>
+            <div class=" flex justify-center items-center" >
+                <button class="bg-gray-700 m-4 transition duration-700 ease-in-out rounded-lg p-4 text-white" >Add</button>
             </div>
         </form>
 
