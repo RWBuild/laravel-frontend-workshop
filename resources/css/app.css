@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
    }
    body {
-    font-family: 'Nunito', sans-serif;
-    background: linear-gradient(120deg,#2590d6,#8e44ad);
+    background: linear-gradient(100deg,#2590d6,#8e44ad);
    }
    a {
     text-decoration: none;
