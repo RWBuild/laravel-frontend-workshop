@@ -10,57 +10,49 @@
     <link rel="stylesheet" href={{ mix('css/app.css') }}>
 </head>
 
-<body>
+<body class="background">
     {{-- NavBar --}}
     @extends('components.navbar')
     {{-- End of Navbar --}}
     @section('content')
-    <div class="card_set">
-
-        <!--card1 -->
-
-        <div class="card">
-            <div class="title">
-                <h1>People</h1>
+        <div class="card_set">
+            <!--card1 -->
+            <div class="card">
+                <div class="title">
+                    <h1>People</h1>
+                </div>
+                <div class="description">
+                    <p>There are {{ $totalPeople }} People here..</p>
+                </div>
+                <div class="descbutton">
+                    <a href="/people">List of People</a>
+                </div>
             </div>
-            <div class="description">
-                <p>There are {{ $totalPeople }} People here..</p>
+            <!--card2 -->
+            <div class="card">
+                <div class="title">
+                    <h1>Badges</h1>
+                </div>
+                <div class="description">
+                    <p>There are {{ $badges }} badges here</p>
+                </div>
+                <div class="descbutton">
+                    <a href="/badges">List of badges</a>
+                </div>
             </div>
-            <div class="descbutton">
-                <a href="/people">List of People</a>
-            </div>
-        </div>
-        <!--card2 -->
-
-
-        <div class="card">
-            <div class="title">
-                <h1>Badges</h1>
-            </div>
-            <div class="description">
-                <p>There are {{$badges}} badges here</p>
-            </div>
-            <div class="descbutton">
-                <a href="/badges">List of badges</a>
-            </div>
-        </div>
-        <!--card3 -->
-        <div class="card">
-            <div class="title">
-                <h1>Favorites</h1>
-            </div>
-            <div class="description">
-                <p>There are {{ $totalFavorites }} Favorites</p>
-            </div>
-            <div class="descbutton">
-                <a href="/favorites">List of favorite</a>
+            <!--card3 -->
+            <div class="card">
+                <div class="title">
+                    <h1>Favorites</h1>
+                </div>
+                <div class="description">
+                    <p>There are {{ $totalFavorites }} Favorites</p>
+                </div>
+                <div class="descbutton">
+                    <a href="/favorites">List of favorite</a>
+                </div>
             </div>
         </div>
-        <!--cards -->
-
-
-
-    </div>
     @endsection
 </body>
 

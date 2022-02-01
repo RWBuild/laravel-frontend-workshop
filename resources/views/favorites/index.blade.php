@@ -17,23 +17,23 @@
     <link rel="stylesheet" href={{ mix('css/app.css') }}>
 </head>
 
-<body>
+<body class="background">
     {{-- NavBar --}}
     @extends('components.navbar')
     {{-- End of Navbar --}}
     @section('content')
-    <table class="fav_table">
-        <tr class="header">
-            <th>favorite name</th>
-            <th>description</th>
-        </tr>
-        @foreach ($favorites as $fav)
-            <tr class="fav_title">
-                <td>{{ $fav->name }}</td>
-                <td>{{ $fav->description }}</td>
+        <table class="fav_table">
+            <tr class="header">
+                <th>favorite name</th>
+                <th>description</th>
             </tr>
-        @endforeach
-    </table>
+            @foreach ($favorites as $fav)
+                <tr class="fav_title">
+                    <td>{{ $fav->name }}</td>
+                    <td>{{ $fav->description }}</td>
+                </tr>
+            @endforeach
+        </table>
     @endsection
 </body>
 
