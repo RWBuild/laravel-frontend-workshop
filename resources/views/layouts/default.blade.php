@@ -9,9 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <link href="{{ mix('css/app.css') }}" rel=stylesheet" />
-
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+        <script src="{{ mix('/js/app.js') }}" defer ></script>
     </head>
     <body class="antialiased min-h-screen bg-gray-50">
         {{-- Header --}}
@@ -30,6 +29,7 @@
                     <a href="/dashboard" class="btn">Dashboard</a>
                     <a href="/badges/assign" class="btn">Assign Badges</a>
                 </div>
+
             </div>
 
             {{-- Secondary menus --}}
@@ -42,8 +42,14 @@
         </div>
 
         <div>
+            {{-- <div> --}}
+                <div id="dropdown"></div>
+                {{-- <div id="example"></div> --}}
+            {{-- </div> --}}
             @yield('content')
+
         </div>
+
 
     </body>
 </html>
