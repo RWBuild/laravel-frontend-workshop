@@ -6,45 +6,16 @@
     <form action="/people" method="POST">
       @csrf
       <div class="py-4">
-        <input type="text" class="w-full px-1 bg-gray-200 py-3 rounded" name="first_name" id="first_name" placeholder="first name"
-        class="@error('first_name')
-          invalid
-        @enderror"
-        >
-        @error('first_name')
-         <p class="error">{{ $message }}</p>   
-        @enderror
-
+        <x-input name='first_name' placeholder='Firstname goes here...' />
       </div>
       <div class="py-4">
-        <input class="w-full px-1 bg-gray-200 py-3 rounded" type="text" name="last name" id="last_name" placeholder="last_name"
-        class="@error('last_name')
-        invalid
-        @enderror"
-        >
-        @error('last_name')
-        <p class="error">{{ $message }}</p>   
-       @enderror
+        <x-input name='last_name' placeholder="Lastname goes here..." />
       </div>
       <div class="py-4">
-        <input class="w-full px-1 bg-gray-200 py-3 rounded" type="email" name="email" id="email" placeholder="email"
-        class="@error('email')
-        invalid
-        @enderror"
-        >
-        @error('email')
-        <p class="error">{{ $message }}</p>   
-       @enderror
+        <x-input type='email' name='email' placeholder="Email goes here..." />
       </div>
       <div class="py-4">
-        <input  class="w-full px-1 bg-gray-200 py-3 rounded" type="date" name="dob" id="dob" placeholder="dob" 
-        class="@error('dob')
-        invalid
-        @enderror"
-        >
-        @error('dob')
-        <p class="error">{{ $message }}</p>   
-       @enderror
+        <x-input type='date' name='dob' placeholder='your date of birth' />
       </div>
       <button type="submit" class="btn">Create</button>
       <a href="/" class="btn">Back home</a>

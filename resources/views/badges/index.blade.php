@@ -5,7 +5,7 @@
       <div class="flex flex-wrap">
         @foreach ($badges as $badge)
             <a href="/badges/{{ $badge->id }}">
-              <div class="card">
+              <div class="card flex flex-col items-center justify-center">
                 <img src="{{ $badge->graphic }}" alt="" width="80">
                 <h4 class="text-lg font-bold">{{ $badge->name }}</h4>
                 <pre>{{ $badge->type }}</pre>
